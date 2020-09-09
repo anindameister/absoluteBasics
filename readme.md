@@ -14,3 +14,11 @@
 2. under <body> we do <script src="jsFilename.js"></script>
 3. open live server for html page and not JS file
 4. check the output
+
+## Java
+
+![Java](https://github.com/anindameister/absoluteBasics/blob/master/snaps/3.PNG)
+
+### remark
+
+We never use "," and instead we always use "+"
