@@ -28,6 +28,11 @@ We never use "," and instead we always use "+"
 ### python
 
 ```
+myList=[]
+for j in range(1,50):
+  
+  myList.append('a'*j)
+
 myList[0]=0
 myList[1]=1
 print("No. 1 from Fibonacci series is ",myList[0])
