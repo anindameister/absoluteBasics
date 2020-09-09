@@ -25,6 +25,8 @@ We never use "," and instead we always use "+"
 
 # WAP to create a Fibonacci series
 
+![fibonacci basics](https://github.com/anindameister/absoluteBasics/blob/master/snaps/5.PNG)
+
 ### python
 
 ```
