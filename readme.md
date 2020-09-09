@@ -22,3 +22,19 @@
 ### remark
 
 We never use "," and instead we always use "+"
+
+# WAP to create a Fibonacci series
+
+### python
+
+```
+myList[0]=0
+myList[1]=1
+print("No. 1 from Fibonacci series is ",myList[0])
+print("No. 2 from Fibonacci series is ",myList[1])
+for i in range(2,len(myList)):
+  myList[i]=myList[i-1]+myList[i-2]
+  print("No.",i+1,"from Fibonacci series is ",myList[i])
+  
+```
+![python](https://github.com/anindameister/absoluteBasics/blob/master/snaps/4.PNG)
