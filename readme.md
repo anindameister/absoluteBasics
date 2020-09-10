@@ -240,4 +240,10 @@ else:
  
 ```
 
+#### geels4geeks4ever
+
+![geels4geeks4ever](https://github.com/anindameister/absoluteBasics/blob/master/snaps/7.PNG)
+![geels4geeks4ever](https://github.com/anindameister/absoluteBasics/blob/master/snaps/8.PNG)
+![geels4geeks4ever](https://github.com/anindameister/absoluteBasics/blob/master/snaps/9.PNG)
+![geels4geeks4ever](https://github.com/anindameister/absoluteBasics/blob/master/snaps/10.PNG)
 
