@@ -163,6 +163,25 @@ public class Fibonacci2 {
 
 ![bad output](https://github.com/anindameister/absoluteBasics/blob/master/snaps/6.PNG)
 
+## aritree methods
+
+#### java
+
+```
+int num1=0;
+int num2=1;
+
+int range=10;(or take range from user)
+
+for (int i=0; i<range;i++)
+{
+      System.out.println(num1);
+      int num3= num1+num2;
+      num1= num2;
+      num2= num3;
+}
+```
+
 
 # WAP to check whether the number is Armstrong number or not... Take user input for numbers
 
