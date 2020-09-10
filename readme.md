@@ -241,9 +241,47 @@ else:
 ```
 
 #### geels4geeks4ever
-
+1
 ![geels4geeks4ever](https://github.com/anindameister/absoluteBasics/blob/master/snaps/7.PNG)
+2
 ![geels4geeks4ever](https://github.com/anindameister/absoluteBasics/blob/master/snaps/8.PNG)
+3
 ![geels4geeks4ever](https://github.com/anindameister/absoluteBasics/blob/master/snaps/9.PNG)
+4
 ![geels4geeks4ever](https://github.com/anindameister/absoluteBasics/blob/master/snaps/10.PNG)
 
+# palindrome for strings
+
+### python 
+
+```
+userInputoriginal=input("enter a string to check if it's palindrome or not:")
+
+
+# userInput=str(userInputoriginal)
+userInput=list(userInputoriginal)
+
+userInput2breversed=userInput[:]
+
+userInput2breversed.reverse()
+
+
+
+def convert(list): 
+      
+
+      
+    # Join list items using join() 
+    res = ("".join(list)) 
+      
+    return(res) 
+  
+reversedUserInput=convert(userInput2breversed)
+
+
+if reversedUserInput==userInputoriginal:
+  print("user inputted palindrome")
+else:
+  print("user's input is not palindrome")
+```
+![output](https://github.com/anindameister/absoluteBasics/blob/master/snaps/11.PNG)
