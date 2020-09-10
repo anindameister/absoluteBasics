@@ -164,7 +164,7 @@ public class Fibonacci2 {
 ![bad output](https://github.com/anindameister/absoluteBasics/blob/master/snaps/6.PNG)
 
 
-# WAP to find the armstrong number by introducing userInput
+# WAP to check whether the number is Armstrong number or not... Take user input for numbers
 
 
 
@@ -197,3 +197,47 @@ else:
 ```
 
 ![scribbling](https://github.com/anindameister/absoluteBasics/blob/master/snaps/7.jpeg)
+
+# WAP to check whether a number is a palindrome or not.. Take number as user input
+
+### python 
+
+```
+userInputoriginal=int(input("enter a number to check if it's palindrome or not:"))
+
+
+userInput=str(userInputoriginal)
+userInput=list(userInput)
+
+userInput2breversed=userInput[:]
+
+userInput2breversed.reverse()
+
+myList=[]
+for i in range(0, len(userInput2breversed)): 
+    userInput2breversed[i] = int(userInput2breversed[i]) 
+    myList.append(userInput2breversed[i])
+
+# print(myList)
+
+def convert(list): 
+      
+    # Converting integer list to string list 
+    s = [str(i) for i in list] 
+      
+    # Join list items using join() 
+    res = int("".join(s)) 
+      
+    return(res) 
+  
+reversedUserInput=convert(myList)
+# print(reversedUserInput) 
+
+if reversedUserInput==userInputoriginal:
+  print("user inputted palindrome")
+else:
+  print("user's input is not palindrome")
+ 
+```
+
+
