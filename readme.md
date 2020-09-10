@@ -97,7 +97,7 @@ for(i=2; i<myList.length; i++){
 
 ![JS](https://github.com/anindameister/absoluteBasics/blob/master/snaps/5.PNG)
 
-#### java
+### java
 
 conversion from string to int
 
@@ -162,4 +162,37 @@ public class Fibonacci2 {
 ```
 
 ![bad output](https://github.com/anindameister/absoluteBasics/blob/master/snaps/6.PNG)
+
+
+# WAP to find the armstrong number by introducing userInput
+
+
+
+### python 
+
+```
+userInputoriginal=int(input("enter a number to check if it's armstrong or not:"))
+
+userInput=str(userInputoriginal)
+
+userInput=list(userInput)
+
+
+
+lengthUserInput=len(userInput)
+
+newList=[]
+for i in range(0,len(userInput)):
+  userInput[i]=int(userInput[i])
+  userInput[i]=pow(userInput[i], 3)
+  newList.append(userInput[i])
+  
+
+summed=sum(newList)
+if userInputoriginal==summed:
+  print("congrats, you have chosen a armstrong number")
+else:
+  print("not a armstrong number")
+  
+```
 
