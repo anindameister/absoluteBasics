@@ -1,8 +1,4 @@
-// function list(iterable) {
-//     return [...iterable];  
-//   }
-  
-// console.log(list('String'));
+
 
 var myList=[]
 for(j=1; j<50; j++){
