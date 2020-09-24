@@ -69,6 +69,8 @@ https://www.w3schools.com/jsref/jsref_repeat.asp
 
 ##### print in JS means printing as in the ctrl+P
 
+![JS](https://github.com/anindameister/absoluteBasics/blob/master/snaps/14.PNG)
+
 ```
 var myList=[]
 for(j=1; j<50; j++){
@@ -94,6 +96,8 @@ for(i=2; i<myList.length; i++){
   console.log("No.",i+1,"from Fibonacci series is ",myList[i])
 }
 ```
+
+
 
 ![JS](https://github.com/anindameister/absoluteBasics/blob/master/snaps/5.PNG)
 
