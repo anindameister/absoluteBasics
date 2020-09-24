@@ -107,69 +107,158 @@ conversion from string to int
 
 https://stackoverflow.com/questions/5585779/how-do-i-convert-a-string-to-an-int-in-java
 
+
+## my method java for fibonacci, as a replication to python&JS work
 ```
 package absoluteBasics;
 
+import java.util.ArrayList;
 
+public class Fibonacci {
 
-public class Fibonacci2 {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		ArrayList<String> fibonaciNumbers =new ArrayList<String>();
+		ArrayList<Integer> fibonaciNumbersInt =new ArrayList<Integer>();
+		
 
 		
-		public static void main(String[]args) {
+		int j;
+		
+		for(j=1;j<50;j++) {
 			
-			
-			String[] myList = {};
-			int j;
-			for(j=1; j<50; j++){
-				String randomString = "a";
-				randomString.repeat(j);
-				
-				int listLength=myList.length;
-				
-	            String arbitaryVariable;
-	            
-	            arbitaryVariable=randomString.repeat(j);
-	            
-	            if (myList.length!=0) {
-	            	
-	            	listLength=listLength+j;
-	            	myList[listLength]=arbitaryVariable;
-	            	
-	            }else {
-	            	myList[listLength]=arbitaryVariable;
-	            }
-	            
-
-	           
-			}
-			
-			int foo0 = Integer.parseInt(myList[0]);
-			foo0=0;
-			int foo1 = Integer.parseInt(myList[1]);
-			foo1=1;
-
-
-				
-					System.out.println("No. 1 from Fibonacci series is "+foo0);
-					System.out.println("No. 2 from Fibonacci series is "+foo1);
-					int i;
-					for(i=2; i<myList.length; i++){
-
-					  myList[i]=myList[i-1]+myList[i-2];
-					  System.out.println("No."+i+1+"from Fibonacci series is "+myList[i]);
-					}
-
+			String randomString="121";
+			String repeatedrandomString = randomString.repeat(j);
+			fibonaciNumbers.add(repeatedrandomString);
+	
 		}
 
+		fibonaciNumbers.set(0,"0");
+		fibonaciNumbers.set(1,"1");
+		fibonaciNumbersInt.add(Integer.parseInt(fibonaciNumbers.get(0)));
+		fibonaciNumbersInt.add(Integer.parseInt(fibonaciNumbers.get(1)));
+
+
+		System.out.println("No. 1 from Fibonacci series is "+fibonaciNumbersInt.get(0));
+		System.out.println("No. 2 from Fibonacci series is "+fibonaciNumbersInt.get(1));
+
+		
+		int i;
+
+		for(i=2; i<fibonaciNumbers.size(); i++){
+
+			fibonaciNumbersInt.add(fibonaciNumbersInt.get(i-1)+fibonaciNumbersInt.get(i-2));
+			int p=i+1;
+			System.out.println("No."+ p +" from Fibonacci series is "+fibonaciNumbersInt.get(i));
+			}
+		
+		
+
+		
+		
+			
+			
+		
+
+		
+		
 	}
+	public static void repeatCharacter(int number) {
+		System.out.println('b'*number);
+		
+	}
+
+	
+	
+}
+
+
+
+```
+- problem with the java output below
+
+![output](https://github.com/anindameister/absoluteBasics/blob/master/snaps/15.PNG)
+
+- same output for JS and python as below for 47 and 48
+
+![output](https://github.com/anindameister/absoluteBasics/blob/master/snaps/16.PNG)
+
+- problem fixed by introducing long
+
+```
+package absoluteBasics;
+
+import java.util.ArrayList;
+
+public class Fibonacci {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		ArrayList<String> fibonaciNumbers =new ArrayList<String>();
+		ArrayList<Long> fibonaciNumbersInt =new ArrayList<Long>();
+		
+
+		
+		int j;
+		
+		for(j=1;j<50;j++) {
+			
+			String randomString="121";
+			String repeatedrandomString = randomString.repeat(j);
+			fibonaciNumbers.add(repeatedrandomString);
+			
+	
+		}
+
+		fibonaciNumbers.set(0,"0");
+		fibonaciNumbers.set(1,"1");
+		fibonaciNumbersInt.add(Long.parseLong(fibonaciNumbers.get(0)));
+		fibonaciNumbersInt.add(Long.parseLong(fibonaciNumbers.get(1)));
+
+
+		System.out.println("No.1 from Fibonacci series is "+fibonaciNumbersInt.get(0));
+		System.out.println("No.2 from Fibonacci series is "+fibonaciNumbersInt.get(1));
+
+		
+		int i;
+
+		for(i=2; i<fibonaciNumbers.size(); i++){
+		
+//			fibonaciNumbersInt.set(i,(fibonaciNumbersInt.get(i-1)+fibonaciNumbersInt.get(i-2)));
+			
+			
+			fibonaciNumbersInt.add(fibonaciNumbersInt.get(i-1)+fibonaciNumbersInt.get(i-2));
+			int p=i+1;
+			System.out.println("No."+ p +" from Fibonacci series is "+fibonaciNumbersInt.get(i));
+			}
+
+		
+
+		
+		
+			
+			
+		
+
+		
+		
+	}
+	public static void repeatCharacter(int number) {
+		System.out.println('b'*number);
+		
+	}
+
+	
+	
+}
 
 ```
 
-![bad output](https://github.com/anindameister/absoluteBasics/blob/master/snaps/6.PNG)
+- aritree methods
 
-## aritree methods
-
-#### java
+- java
 
 ```
 int num1=0;
