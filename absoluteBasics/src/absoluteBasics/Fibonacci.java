@@ -44,8 +44,7 @@ public class Fibonacci {
 			int p=i+1;
 			System.out.println("No."+ p +" from Fibonacci series is "+fibonaciNumbersInt.get(i));
 			}
-		System.out.println("no.49= "+fibonaciNumbersInt.get(48));
-		System.out.println("no.48= "+fibonaciNumbersInt.get(47));
+
 		
 
 		
