@@ -1,41 +1,28 @@
 package absoluteBasics;
 
 import java.util.ArrayList;
-import java.util.Arrays;
+
 import java.util.Scanner;
 
-public class PalindromeInteger {
+public class PalindromeString {
 	public static void main(String[] args) {
 		Scanner userInputoriginal= new Scanner(System.in);    
-		System.out.print("enter a number to check if it's palindrome or not:");  
-		int userInput= userInputoriginal.nextInt();  
+		System.out.print("enter a word to check if it's palindrome or not:");  
+		String userInput= userInputoriginal.nextLine();  
 		userInputoriginal.close();
-//		https://www.programiz.com/java-programming/examples/digits-count
-		int count = 0;
-		int userInput2=userInput;
-		while(userInput2 != 0)
-        {
-          
-			userInput2 /= 10;
-            ++count;
-        }
-//		System.out.println(count);
-//		System.out.println("_________");
 
 		
-		String userInput2string = Integer.toString(userInput); 
-		 
-
+		
 		
 		
 	
 		ArrayList<String> userInput2string2list =new ArrayList<String>();
 		ArrayList<String> userInput2string2list2 =new ArrayList<String>();
-		for (String retval: userInput2string.split("")) {
+		for (String retval: userInput.split("")) {
 
-			int retvalInted=Integer.parseInt(retval); 
-			String stringedRetvalInted=Integer.toString(retvalInted);
-			userInput2string2list.add(stringedRetvalInted);
+			
+			
+			userInput2string2list.add(retval);
 			
 		}
 		for (int j=userInput2string2list.size()-1;j>=0;j--) {
@@ -53,11 +40,12 @@ public class PalindromeInteger {
 	          sb.append(s);
 	       }
 	      String str = sb.toString();
-	      int IntedStr=Integer.parseInt(str); 
 	      
-//	      System.out.println(IntedStr);
 	      
-	      if (userInput==IntedStr){
+	      System.out.println(str);
+	      System.out.println(userInput);
+	      
+	      if (userInput.contentEquals(str)==true){
 	    	  System.out.println("input palindrome");
 	    	  
 	      }else {
@@ -66,4 +54,6 @@ public class PalindromeInteger {
 		
 			
 			 
-	}}
+	}
+
+}
