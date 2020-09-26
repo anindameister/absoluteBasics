@@ -492,7 +492,7 @@ public class PalindromeInteger {
 			
 			 
 	}}
-	```
+```
 ![BasicLoopThe otherway](https://github.com/anindameister/absoluteBasics/blob/master/snaps/18.PNG)	
 	
 
@@ -540,9 +540,12 @@ if reversedUserInput==userInputoriginal:
 else:
   print("user's input is not palindrome")
 ```
+
+
 ![output](https://github.com/anindameister/absoluteBasics/blob/master/snaps/11.PNG)
 
 - java palindrome for strings
+
 
 ```
 package absoluteBasics;
@@ -600,9 +603,6 @@ public class PalindromeString {
 	      }else {
 	    	  System.out.println("input NOT palindrome");
 	      }
-		
-			
-			 
 	}
 
 }
