@@ -608,3 +608,10 @@ public class PalindromeString {
 }
 
 ```
+
+- 14 mins of java basics
+https://youtu.be/RRubcjpTkks
+
+- 9th min summarisation
+https://youtu.be/CWYv7xlKydw
+oops
