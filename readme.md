@@ -592,7 +592,7 @@ public class PalindromeString {
 	      System.out.println(str);
 	      System.out.println(userInput);
 	      
-//	      https://www.geeksforgeeks.org/compare-two-strings-in-java/
+	      //https://www.geeksforgeeks.org/compare-two-strings-in-java/
 	      
 	      if (userInput.contentEquals(str)==true){
 	    	  System.out.println("input palindrome");
