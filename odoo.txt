@@ -1,0 +1,270 @@
+
+Please note:
+Read the questions carefully. Every word is important.
+Feel free to add comments in your answers and read the documentation as you see fit.
+Don't forget to mention the language you are using.
+Do test your code!
+Between parenthesis is the weight of each question, the maximum score is 20
+
+
+Test 1: Any language (3/20)
+Write a program that outputs sequentially the integers from 1 to 99, but on some conditions prints a string instead:
+when the integer is a multiple of 3 print “Open” instead of the number,
+when it is a multiple of 7 print “Source” instead of the number,
+when it is a multiple of both 3 and 7 print “OpenSource” instead of the number.
+
+#java
+
+package odooCompany;
+
+public class Test1 {
+
+        public static void main(String[] args) {
+                for (int i = 1; i < 100; i++) {
+            
+            if (i%3==0 && i%7==0) {
+                    System.out.println("OpenSource");
+            }else if (i%7==0) {
+                    System.out.println("Source");
+            }else if  (i%3==0){
+                    System.out.println("Open");
+            }else{
+                    System.out.println(i)
+            }
+
+}
+        }
+}
+
+Test 2: Any language (3/20)
+Solve the game "Guess a number", find a secret integer between 1 and 1000000
+in less than 50 guesses. Write a function that solves the game without user input and returns the
+solution by using the function verify() which is defined with the following
+specification:
+function verify(guess: integer) -> integer
+Argument:
+     guess (integer) the number to verify
+Returns:
+     0 if the guess is the solution, your program won
+     -1 if the solution is smaller than the guess parameter
+     1  if the solution is bigger than the guess parameter
+
+Warning: You are not allowed to call verify() more that 50 times or you lose.
+
+function GuessANumber () { 
+    let answer = Math.ceil(Math.random() * 1000000) 
+    let count = 0; 
+    let lower = 0; 
+    let upper = 1000000; 
+ 
+    while (true){ 
+        if (count > 50) return console.log('Lose!, right number is ' + answer) 
+         let guess = Math.floor((lower + upper) / 2) 
+        const result = verify(guess) 
+        if(result === 0){ 
+            return console.log('Winner!, correct number is'  + answer ) 
+          }else if (result === -1) { 
+              upper = guess 
+           }else if (result === 1){ 
+              lower = guess 
+            } 
+          console.log(guess) 
+        const counting=count++ 
+        
+        } 
+ 
+  function verify (guess) { 
+      if(guess === answer) return 0 
+      if(answer < guess) return -1 
+      if(answer > guess) return 1 
+ 
+    } 
+ 
+ 
+    }
+
+
+console.log(GuessANumber ())
+
+Test 3: Any language (3/20)
+Write a function that takes a list of strings and returns the sum of the list items that represent an integer (skipping the other items)
+
+#python
+
+def funcAcceptingListOfStrings(listOfStrings): 
+  
+    
+    return  sum([int(i) for i in listOfStrings if type(i)== int or i.isdigit()]) 
+  
+# Declaring list 
+list1 = [1, 'aninda', 2, '4', 'maulik'] 
+
+  
+# Result of sum of list 
+print (funcAcceptingListOfStrings(list1) )
+
+Test 4: Any language (1/20)
+Write a recursive version of the previous function (or an iterative version if you have already done a recursive version).
+
+# python
+def recursivefuncAcceptingListOfStrings(arr, N): 
+     if len(arr)== 1: 
+        return arr[0] 
+     else: 
+        return arr[0]+recursivefuncAcceptingListOfStrings(arr[1:], N) 
+  
+
+arr =[] 
+# input values to list 
+arr = [1, 2, 3, 4, 5] 
+   
+# calculating length of array 
+N = len(arr) 
+   
+ans =recursivefuncAcceptingListOfStrings(arr,N) 
+print (ans)
+
+
+
+Test 5: SQL (3/20)
+Write pseudo-SQL statements to create database tables to store the products of a basic webshop. Each product has a name, a price, a creation date and may belong to several categories. Categories have a name and a flag to indicate whether the category is private or public.
+Write a SQL query to find the list of products that belong to more than 5 public categories.
+
+product(production_id, production_name, price, date)
+production_id:Primary key
+category(category_id, category_name, category_flag, categorycat_type)
+category_id:primary key
+productcategory(product_id, category_id)
+product_id, category_id : primary keys
+
+
+query:
+    SELECT production_id FROM productcategory WHERE category_id in (select category_id from category where category_type = 'public') group by product_id having count(*)>2
+
+Test 6: Any language (1/20)
+Write a program to download the contents of https://www.sap.com/belgique/index.html (the SAP homepage for Belgium), and then save the contents of the page to a new local file, with all occurrences of "SAP" replaced by "Odoo".
+
+#java
+package odooCompany;
+import java.net.MalformedURLException;
+import java.io.IOException;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.URL;
+
+public class Test6 {
+        public void downloadingContent() {
+                try {
+                        URL url = new URL ("http://www.sap.com/belgique/index.html");
+                        InputStream stream = url.openStream();
+                        BufferedReader input = new BufferedReader (new InputStreamReader(stream));
+                        File file = new File ("copy.html");
+                        if (!file.exists()) {
+                                file.createNewFile();
+                        }
+                        BufferedWriter output = new BufferedWriter (new FileWriter(file.getAbsoluteFile()));
+                        String line;
+//                        replacing SAP by Odoo.
+                        while ( (line = input.readLine()) != null) {
+                                output.write(line.replace("SAP", "Odoo"));
+                        }
+                        output.close();
+                
+                
+                }catch (MalformedURLException ue) {
+                        ue.printStackTrace();
+                }catch (IOException ie) {
+                        ie.printStackTrace();
+                }finally {
+                        try {
+                                URL url = new URL ("http://www.sap.com/belgique/index.html");
+                                InputStream stream = url.openStream();
+                                if (stream != null) stream.close();
+                        }catch (IOException ie) {
+                                ie.printStackTrace();
+                        }
+                }
+                
+                        
+                        
+        }}
+
+Test 7: Any language (2/20)
+You have a huge file named "data.bin" that does not fit in memory; code a program that deletes every 7th byte of it. truncate can be used to change its size.
+
+# c
+
+int main(int argc, char* argv[]){
+    FILE *fp_read, *fp_write;
+    int counter = 1, i = 0;
+    char ch;
+
+    fp_read = fopen("data.bin", "r");
+    fp_write = fopen("data.bin", "r+");
+
+    if(!fp_read || !fp_write)
+    {
+        printf("File not present\n");
+        exit(1);
+    }
+
+    fseek(fp_read, 0, SEEK_END);
+    int size = ftell(fp_read);
+    printf("Size = %d\n", size);
+    fseek(fp_read, 0, SEEK_SET);
+
+    while(counter < size)
+    {
+        ch = fgetc(fp_read);
+        if(counter % 5 != 0)
+        {
+            fputc(ch, fp_write);
+        }
+        else
+            i++;
+        //printf("%c ", ch);        counter++;
+    }
+
+    fclose(fp_read);
+    fclose(fp_write);
+    printf("Trucate by %d bytes", i);
+
+Test 8: Regular Expression (2/20)
+Write a regular expression to match strings containing both "Odoo" and "#rules" in any order.
+
+(?=.Odoo)(?=.#rules).*$
+
+Test 9: Javascript (1/20)
+Write a function that, when called, returns an array for which each element is a letter of the alphabet, from "A" to "Z" (exactly once, in order and upper case). Your code cannot contain the character ' (quote), " (double quote) or ` (back quote)
+
+
+function getA2ZArray () { 
+    const result = [] 
+    for (i = 65; i <= 90 ; i++){ 
+        result.push(String.fromCharCode(i)) 
+      } 
+      return result 
+ 
+    }
+
+console.log(getA2ZArray ())
+
+Test 10: Unix (1/20)
+Write a C program that roughly measures the overhead of a mode switch between the kernel and userspace on a UNIX/Linux system (without using the pthread API). Please indicate the assumptions your rough estimation is based on.
+
+
+#include<time.h>
+    #include<stdio.h>int main(){
+    clock_t begin=clock();
+
+    int i;
+    for(i=0;i<1000000;i++){
+        printf("%d",i);
+    }
+    clock_t end=clock();
+    printf("Time taken:%lf",(double)(end-begin)/CLOCKS_PER_SEC);
+}

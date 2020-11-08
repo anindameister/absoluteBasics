@@ -261,18 +261,26 @@ public class Fibonacci {
 - java
 
 ```
-int num1=0;
-int num2=1;
+package oopsAlexLee;
 
-int range=10;(or take range from user)
+public class Fibonacci {
+	
+	public static void main(String[]args) {
+		int num1=0;
+		int num2=1;
 
-for (int i=0; i<range;i++)
-{
-      System.out.println(num1);
-      int num3= num1+num2;
-      num1= num2;
-      num2= num3;
+		int range=10;
+
+		for (int i=0; i<range;i++)
+		{
+		      System.out.println(num1);
+		      int num3= num1+num2;
+		      num1= num2;
+		      num2= num3;
+		}
+	}
 }
+
 ```
 
 
@@ -615,3 +623,10 @@ https://youtu.be/RRubcjpTkks
 - 9th min summarisation
 https://youtu.be/CWYv7xlKydw
 oops
+
+- classes are blue prints of objects
+- objects represents real world objects in the computer using variables and methods
+- methods can have the same name using polymorphism
+- you can bring methods and variables from other classes by inheriting those methods using extends keyword
+- you can also take a list of methods and variables and implement those methods using the implements keyword
+- you can also have access to private variables by making methods to change them and get them called setters and getters and that's called encapsulation

@@ -1,0 +1,26 @@
+//Write a program that outputs sequentially the integers from 1 to 99, but on some conditions prints a string instead:
+//when the integer is a multiple of 3 print “Open” instead of the number,
+//when it is a multiple of 7 print “Source” instead of the number,
+//when it is a multiple of both 3 and 7 print “OpenSource” instead of the number.
+
+package odooCompany;
+
+public class Test1 {
+
+	public static void main(String[] args) {
+		for (int i = 1; i < 100; i++) {
+            
+            if (i%3==0 && i%7==0) {
+            	System.out.println("OpenSource");
+            }else if (i%7==0) {
+            	System.out.println("Source");
+            }else if  (i%3==0){
+            	System.out.println("Open");
+            }else{
+            	System.out.println(i);
+            }
+
+}
+	}
+}
+
