@@ -1,5 +1,5 @@
 package w3SchoolsJavaClass;
 
-public class Lip {
+class Lip {
 
 }

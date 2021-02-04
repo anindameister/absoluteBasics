@@ -1,9 +1,9 @@
 package w3SchoolsJavaClass;
 
-public class Ear {
+class Ear {
 	
-	void EarFunction() {
-		System.out.println("using ears, a mammal can listen");
+	static void EarFunction() {
+		System.out.printf("5*2=%d",5*2);
 	}
 
 }

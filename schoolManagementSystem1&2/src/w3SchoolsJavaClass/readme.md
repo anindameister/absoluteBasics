@@ -1,5 +1,7 @@
 # Java class
 
+- Note: Java is a strongly typed language. We have got to mention the datatype of the variable that we are declaring
+
 
 ## modify attributes
 
@@ -10,7 +12,7 @@
 ![Static vs. Non-Static](https://github.com/anindameister/absoluteBasics/blob/master/snaps/21.PNG)
 
 - the example showing the difference between static and non-static method
-    - non static menthod has been referred to as public method
+    - non static method has been referred to as public method
 
 ![Static vs. Non-Static code ](https://github.com/anindameister/absoluteBasics/blob/master/snaps/22.PNG)
 
@@ -45,7 +47,7 @@ public class Main {
 
 - the concept of **this** would come up when we try to create a constructor for private attributes.
 
-- but in the belw snap, we are not using private, so it's straight forward
+- but in the below snap, we are not using private, so it's straight forward
 
 ![Constructor Parameters, multiple](https://github.com/anindameister/absoluteBasics/blob/master/snaps/24.PNG)
 
@@ -67,10 +69,19 @@ public class Main
 ## Access Modifiers
 - For classes, 
     - you can use either 
-        - public :The class is accessible by any other class
+        - public :The class is accessible by any other class **in all the packages within the same project**
         - or default: The class is only accessible by classes in the same package. This is used when you don't specify a modifier. 
+
+- default for classes
+```
+class MyClass {
+  public static void main(String[] args) {
+    System.out.println("Hello World");
+  }
+}
+```
 - For attributes, methods and constructors, you can use the one of the following:
-    - public: The code is accessible for all classes
+    - public: The code is accessible for all classes **in all the packages within the same project**
     - private: The code is only accessible within the declared class
     - default: The code is only accessible in the same package. This is used when you don't specify a modifier.
     - protected:The code is accessible in the same package and subclasses. You will learn more about subclasses and superclasses in the **Inheritance** chapter	
@@ -335,5 +346,86 @@ Ford Mustang
 
 ![The final Keyword](https://github.com/anindameister/absoluteBasics/blob/master/snaps/32.PNG)
 
+## private and static in terms of attributes and methods
+
+- so am using private attribute
+- using private attribute means that am making that attribute available for the class where it has been specified
+- in order to make the private attribute accessed outside this class, then we need to use getters&setters method within the class where it has been declared
+- Now, getters and setters, been put to place. hence the private attribute is accessible outside the class
+- the way, this private attribute would be accessible is by creating an object of the class and then utilising that object to call the attribute
+- Finally **System.out.println** =class+attribute+object [[1]](#1).
+- System: It is a final class defined in the java.lang package. 
+  - final: The class cannot be inherited by other classes.
+- out: This is an instance of PrintStream type, which is a public and static member field of the System class.
+  - out is an attribute of the final class named System. 
+  - The attribute type is PrintStream
+  - Based on my understanding, PrintStream is a class in itself
+- println(): As all instances of PrintStream class have a public method println(), hence we can invoke the same on out as well.
+  - PrintStream class have a public method println()
+
+## let's try to create a System.out.println
+- System => Aninda =>final class called Aninda
+- out => love =>attribute of the final class. Attribute type is emotion.
+- PrintStream => emotion => emotion is a public and static member field of the class Aninda.
+- println =>loveMaking =>loveMaking is a public method of the class called emotion
+- java.lang =>AsishKalpanaMaulik
+
+## println and printf
+```
+package w3SchoolsJavaClass;
+
+class World {
+
+	public static void main(String[] args) {
+
+    Human.getEar().EarFunction();
+
+}}
+
+package w3SchoolsJavaClass;
+
+class Human {
+
+	private static Ear ear;
+
+	protected static Ear getEar() {
+
+		return ear;
+
+	}
+
+	protected static void setEar(Ear ear) {
+
+		Human.ear = ear;
+
+	}
+
+}
+
+package w3SchoolsJavaClass;
+
+class Ear {
+
+	
+
+	static void EarFunction() {
+
+		System.out.printf("5*2=%d",5*2);
+
+	}
+
+}
+
+```
+
+## decimal to binary
+
+- 13 to binary
+
+![ decimal to binary](https://github.com/anindameister/absoluteBasics/blob/master/snaps/33.PNG)
 
 
+
+## References
+<a id="1">[1]</a> 
+https://www.geeksforgeeks.org/system-out-println-in-java/#:~:text=System%3A%20It%20is%20a%20final,same%20on%20out%20as%20well.

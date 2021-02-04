@@ -1,49 +1,60 @@
 package w3SchoolsJavaClass;
 
-public class Human {
-	private Ear ear;
+class Human {
+	private static Ear ear;
 	private Nose nose;
 	private Eye eye;
 	private Lip lip;
 	private Leg leg;
 	private Hand hand;
-	public Ear getEar() {
+	protected static Ear getEar() {
 		return ear;
 	}
-	public void setEar(Ear ear) {
-		this.ear = ear;
+	protected static void setEar(Ear ear) {
+		Human.ear = ear;
 	}
-	public Nose getNose() {
+	protected Nose getNose() {
 		return nose;
 	}
-	public void setNose(Nose nose) {
+	protected void setNose(Nose nose) {
 		this.nose = nose;
 	}
-	public Eye getEye() {
+	protected Eye getEye() {
 		return eye;
 	}
-	public void setEye(Eye eye) {
+	protected void setEye(Eye eye) {
 		this.eye = eye;
 	}
-	public Lip getLip() {
+	protected Lip getLip() {
 		return lip;
 	}
-	public void setLip(Lip lip) {
+	protected void setLip(Lip lip) {
 		this.lip = lip;
 	}
-	public Leg getLeg() {
+	protected Leg getLeg() {
 		return leg;
 	}
-	public void setLeg(Leg leg) {
+	protected void setLeg(Leg leg) {
 		this.leg = leg;
 	}
-	public Hand getHand() {
+	protected Hand getHand() {
 		return hand;
 	}
-	public void setHand(Hand hand) {
+	protected void setHand(Hand hand) {
 		this.hand = hand;
 	}
 	
+	Human(Ear ear,Nose nose,Eye eye,Lip lip,Leg leg,Hand hand){
+		this.ear=ear;
+		this.nose=nose;
+		this.eye=eye;
+		this.lip=lip;
+		this.leg=leg;
+		this.hand=hand;
+		
+		
+		
+	}
 	
 	
 
