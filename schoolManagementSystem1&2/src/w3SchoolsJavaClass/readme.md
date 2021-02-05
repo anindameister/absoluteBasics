@@ -3,6 +3,19 @@
 - Note: Java is a strongly typed language. We have got to mention the datatype of the variable that we are declaring
 - same method names cannot be used, even if we're trying to create an object of a different class. 
   - This situation came up while dealing with outer and class
+  - there are three ways to start writing a kinda java class
+    - Illegal modifier for the class Gari; only public, abstract & final are permitted
+      - The type Car cannot subclass the final class Gari
+    - 1. regular class
+      - public 
+        - static
+        - or without static
+      - default
+        - without public
+        - without static
+    - 2. final
+    - 3. abstract
+      - interface
 
 
 ## modify attributes
@@ -855,6 +868,227 @@ Some other text...
 ## Java Enums
 - An enum is a special "class" that represents a group of constants (unchangeable variables, like final variables).
 - To create an enum, use the enum keyword (instead of class or interface), and separate the constants with a comma. Note that they should be in uppercase letters:
+- Enum is short for "enumerations", which means "specifically listed".
+
+```
+package learningEnum;
+
+enum Level {
+	
+	  LOW,
+	  MEDIUM,
+	  HIGH
+
+}
+```
+- You can access enum constants with the dot syntax:
+
+- classWithMainMethod
+```
+package learningEnum;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Level myVar = Level.MEDIUM;
+		System.out.println(myVar);
+
+	}
+
+}
+```
+- enum inside a class
+
+![enum inside a class](https://github.com/anindameister/absoluteBasics/blob/master/snaps/39.PNG)
+
+- Enum in a Switch Statement
+- Enums are often used in switch statements to check for corresponding values:
+
+```
+package learningEnum;
+
+enum Level {
+	
+	  LOW,
+	  MEDIUM,
+	  HIGH
+
+}
+```
+- classWithMainMethod
+```
+package learningEnum;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Level myVar = Level.MEDIUM;
+
+		
+		
+		switch(myVar) {
+		case LOW:
+			System.out.println("your level is low in regards to java");
+			
+			break;
+			/*
+			 * it should be all in caps
+			 * Medium is no-no
+			 * MEDIUM
+			 */
+		case MEDIUM:
+			System.out.println("your level is medium in regards to java");
+			break;
+		case HIGH:
+			System.out.println("your level is high in regards to java");
+			break;
+			
+		}
+
+	}
+
+}
+```
+- Loop Through an Enum
+- The enum type has a **values()** method, which returns an array of all enum constants.
+- This method is useful when you want to loop through the constants of an enum:
+
+```
+package learningEnum;
+
+enum Level {
+	
+	  LOW,
+	  MEDIUM,
+	  HIGH
+
+}
+```
+- classWithMainMethod
+```
+package learningEnum;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+    	/*
+		 * object of Enum called Level is being created with the object name myVar2
+		 */
+		
+		for (Level myVar2 : Level.values()) {
+			  System.out.println(myVar2);
+			}
+
+
+	}
+	
+	
+}
+```
+
+## Java User Input (Scanner)
+
+- The Scanner class is used to get user input, and it is found in the java.util package.
+- To use the Scanner class, create an object of the class and use any of the available methods found in the Scanner class documentation. 
+- https://docs.oracle.com/en/java/javase/14/docs/api/java.base/java/util/Scanner.html
+- In our example, we will use the nextLine() method, which is used to read Strings:
+```
+package learningEnum;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+	Scanner myObj = new Scanner(System.in);  // Create a Scanner object
+	    System.out.println("Enter username");
+
+	    String userName = myObj.nextLine();  // Read user input
+	    System.out.println("Username is: " + userName);  // Output user input
+
+
+	}
+	
+	
+}
+```
+- output along with user input
+
+```
+Enter username
+anindameister
+Username is: anindameister
+```
+- the other methods in the scanner class
+
+![scanner, the other methods](https://github.com/anindameister/absoluteBasics/blob/master/snaps/41.PNG)
+
+```
+package learningEnum;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Scanner myObj = new Scanner(System.in);  // Create a Scanner object
+	    System.out.println("Enter username");
+
+	    String userName = myObj.nextLine();  // Read user input
+	    System.out.println("Username is: " + userName);  // Output user input
+	    
+	    System.out.println("*******************************************************");
+	    
+	    
+	    Scanner myObj2 = new Scanner(System.in);
+
+	    System.out.println("Enter name, age and salary:");
+
+	    // String input
+	    String name = myObj2.nextLine(); // Read user input which is String
+
+	    // Numerical input
+	    int age = myObj.nextInt(); // Read user input which is Integer
+	    double salary = myObj2.nextDouble(); // Read user input which is double
+
+	    // Output input by user
+	    System.out.println("Name: " + name);
+	    System.out.println("Age: " + age);
+	    System.out.println("Salary: " + salary);
+
+
+	}
+	
+	
+}
+```
+- output
+```
+Enter username
+anindameister
+Username is: anindameister
+*******************************************************
+Enter name, age and salary:
+aninda
+32
+600
+Name: aninda
+Age: 32
+Salary: 600.0
+```
+
+- scanner class might generate exceptions, the details of the exception can also be read in the documentation
+
+![scanner, the other methods](https://github.com/anindameister/absoluteBasics/blob/master/snaps/42.PNG)
+
+
+
+
+
+
+
 
 
 
