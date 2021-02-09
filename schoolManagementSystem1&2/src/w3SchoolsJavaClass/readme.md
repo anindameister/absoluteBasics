@@ -1083,11 +1083,64 @@ Salary: 600.0
 
 ![scanner, the other methods](https://github.com/anindameister/absoluteBasics/blob/master/snaps/42.PNG)
 
+## Java Date and Time
+
+- Java Dates
+- Java does not have a built-in Date class, but we can import the java.time package to work with the date and time API. The package includes many date and time classes. For example:
+
+- java data class description
+
+![java data class description](https://github.com/anindameister/absoluteBasics/blob/master/snaps/43.PNG)
+
+- Display Current Date
+
+```
+package dateAndTime;
+
+import java.time.LocalDate;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		LocalDate myObj = LocalDate.now(); // Create a date object
+
+		
+		System.out.println(myObj);
+
+	}
+
+}
+```
+- output
+```
+2021-02-05
+```
+- the rest needs to be checked in https://www.w3schools.com/java/java_date.asp
 
 
+## ArrayList
+- straight forward from https://www.w3schools.com/java/java_arraylist.asp
 
+## LinkedList
 
+- https://www.w3schools.com/java/java_linkedlist.asp
 
+- LinkedList and ArrayList, when to be used
+
+![LinkedList and ArrayList, when to be used](https://github.com/anindameister/absoluteBasics/blob/master/snaps/44.PNG)
+
+## HashMap
+
+- https://www.w3schools.com/java/java_hashmap.asp
+
+## HashSet
+
+- https://www.w3schools.com/java/java_hashset.asp
+- kinda, set for python
+
+- LinkedList could contains multiple number of duplicates in its collection. 
+- On other hand duplicate elements are allowed in LinkedHashSet only like HashSet.
 
 
 
@@ -1204,6 +1257,15 @@ class Ear {
 - 13 to binary
 
 ![ decimal to binary](https://github.com/anindameister/absoluteBasics/blob/master/snaps/33.PNG)
+
+
+## finance app idea
+
+- understand the fixed expenses
+- find a way to entry the variable expenses as and when it happens
+- understand the income
+- make entry of the additional income as and when it happens
+- everytime, I open the app, jre, it is going to show up exactly how much additional month/days can I sustain, considering no income
 
 
 

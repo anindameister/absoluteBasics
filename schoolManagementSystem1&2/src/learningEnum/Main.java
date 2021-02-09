@@ -49,11 +49,11 @@ public class Main {
 	    System.out.println("Enter name, age and salary:");
 
 	    // String input
-	    String name = myObj2.nextLine();
+	    String name = myObj2.nextLine(); // Read user input which is String
 
 	    // Numerical input
-	    int age = myObj.nextInt();
-	    double salary = myObj2.nextDouble();
+	    int age = myObj.nextInt(); // Read user input which is Integer
+	    double salary = myObj2.nextDouble(); // Read user input which is double
 
 	    // Output input by user
 	    System.out.println("Name: " + name);

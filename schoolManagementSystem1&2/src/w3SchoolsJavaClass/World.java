@@ -25,10 +25,12 @@ class World {
 //		Human.ear.EarFunction();
 		
 		Human.getEar().EarFunction();
+
 		
 		
 
 
+		
 	}
 
 }
