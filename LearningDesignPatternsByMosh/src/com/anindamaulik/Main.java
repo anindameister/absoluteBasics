@@ -22,8 +22,23 @@ public class Main {
         editor.setContent("a");
         editor.setContent("b");
         editor.setContent("m");
-        System.out.println(editor.getContent());
-        editor.undo(editor.getContent());
+
+        editor.undo();
+
+        editor.setTitle("Aninda Maulik is great");
+        editor.setTitle("His greatness comes from understanding the basics of greatness");
+        editor.setTitle("He would try to become greater than the greatest by starting to think in 1st principle");
+        System.out.println(editor.getPreviousTitle());
+        editor.undoTitle();
+
+        editor.setOneWordTitle("aninda");
+        editor.setOneWordTitle("maulik");
+        editor.setOneWordTitle("GreatAnindaMaulik");
+
+        editor.undoOneWordTitle();
+
+
+
 
 
     }
