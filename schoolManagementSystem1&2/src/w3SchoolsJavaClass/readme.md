@@ -66,6 +66,10 @@ public class Main {
 
 ![Constructor Parameters, multiple](https://github.com/anindameister/absoluteBasics/blob/master/snaps/24.PNG)
 
+
+**please recall that the void keyword, allowed Employees object being created without the requirement of parameters to be passed in**
+
+
 - Java Modifiers
 - Modifiers
 - By now, you are quite familiar with the **public** keyword that appears in almost all of our examples:
