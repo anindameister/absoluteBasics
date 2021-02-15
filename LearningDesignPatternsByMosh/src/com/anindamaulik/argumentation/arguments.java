@@ -5,7 +5,6 @@ import java.util.LinkedList;
 
 public class arguments {
 
-
     private static char a='a';
     private static char b='b';
     private static char c='c';
@@ -95,6 +94,4 @@ public class arguments {
         return R;
 
     }
-
-
 }
